@@ -40,8 +40,8 @@ func main() {
     removeInlineAttributes := false
     stripped, _ := htmltags.Strip(original, allowedTags, removeInlineAttributes)
     
-    fmt.Println(stripped) //will output Node structure
-    fmt.Println(stripped.ToString()) //will output string: This is <strong>complex</strong> text with children <i>nodes</i>
+    fmt.Println(stripped) //output: Node structure
+    fmt.Println(stripped.ToString()) //output string: This is <strong>complex</strong> text with children <i>nodes</i>
 }
 ```
 
