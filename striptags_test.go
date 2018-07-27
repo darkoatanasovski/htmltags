@@ -4,12 +4,12 @@ import (
 	"testing"
 )
 
-func TestStrip(t *testing.T){
+func TestStrip(t *testing.T) {
 	tests := []struct {
-		Input string
-		AllowedTags []string
+		Input                 string
+		AllowedTags           []string
 		StripInlineAttributes bool
-		Want string
+		Want                  string
 	}{
 		{"", []string{}, true, ""},
 		{"<p>Content</p>", []string{}, true, "Content"},
@@ -17,7 +17,7 @@ func TestStrip(t *testing.T){
 		{"<p>This is content <span>with child tags</span></p>", []string{"span"}, true, "This is content <span>with child tags</span>"},
 		{"<p>This is content <span style=\"font-size:20px;\">with child tags</span></p>", []string{"span"}, true, "This is content <span>with child tags</span>"},
 		{"<p>This is content <span style=\"font-size:20px;\">with child tags</span></p>", []string{"span"}, false, "This is content <span style=\"font-size:20px;\">with child tags</span>"},
-		{"<p>This <p><span> foo <i>is</i> bar</span></p> content <span>with <em>child</em> tags</span></p>", []string{"span","i", "em"}, true, "This <span> foo <i>is</i> bar</span> content <span>with <em>child</em> tags</span>"},
+		{"<p>This <p><span> foo <i>is</i> bar</span></p> content <span>with <em>child</em> tags</span></p>", []string{"span", "i", "em"}, true, "This <span> foo <i>is</i> bar</span> content <span>with <em>child</em> tags</span>"},
 	}
 
 	for _, test := range tests {
