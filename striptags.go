@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+//Nodes structure with html.Node elements
 type Nodes struct {
 	Elements *html.Node
 }
@@ -46,7 +47,7 @@ func toNodes(document string) (*html.Node, error) {
 	return nodes, nil
 }
 
-//Nodes method. Converts nodes to string
+//ToString is a Nodes method. Converts Nodes.Elements to string
 func (nodes *Nodes) ToString() string {
 	var buf bytes.Buffer
 	for n := nodes.Elements.FirstChild; n != nil; n = n.NextSibling {
