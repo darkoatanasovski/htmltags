@@ -17,26 +17,25 @@ $ go get github.com/darkoatanasovski/htmltags
 
 If you want to keep the inline attributes of the tags, set user third parameter to `false`
 ```go
-stripped, _ := htmltags.Strip("<h1>Header text with <span style=\"color:red\">color</span></h1>", []strings{"span"}, false)
+stripped, _ := htmltags.Strip("<h1>Header text with <span style=\"color:red\">color</span></h1>", []string{"span"}, false)
 ```
 
 Or if you want to strip all tags from the string, and get a pure text, the second parameter has to be
 empty array
 
 ```go
-stripped, _ := htmltags.Strip("<h1>Header text with <span style=\"color:red\">color</span></h1>", []strings{}, false)
+stripped, _ := htmltags.Strip("<h1>Header text with <span style=\"color:red\">color</span></h1>", []string{}, false)
 ```
 
 ```go
 import(
-    "strings"
     "fmt"
     "github.com/darkoatanasovski/htmltags"
 )
 
 func main() {
     original := "<div>This is <strong style=\"font-size:50px\">complex</strong> text with <span>children <i>nodes</i></span></div>"
-    allowedTags := []strings{"strong", "i"}
+    allowedTags := []string{"strong", "i"}
     removeInlineAttributes := false
     stripped, _ := htmltags.Strip(original, allowedTags, removeInlineAttributes)
     
