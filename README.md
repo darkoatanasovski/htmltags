@@ -1,6 +1,7 @@
 HTML Strip tags
 =====================
 
+[![Build Status][build-status-svg]][build-status-link]
 [![Docs][docs-godoc-svg]][docs-godoc-link]
 [![Go Report Card][goreport-svg]][goreport-link]
 [![License][license-svg]][license-link]
@@ -51,6 +52,8 @@ If you have cloned this repo you will probably need the dependency:
 
 `go get golang.org/x/net/html`
 
+[build-status-svg]: https://api.travis-ci.org/darkoatanasovski/htmltags.svg?branch=master
+[build-status-link]: https://travis-ci.org/darkoatanasovski/htmltags
 [docs-godoc-svg]: https://img.shields.io/badge/docs-godoc-blue.svg
 [docs-godoc-link]: https://godoc.org/github.com/darkoatanasovski/htmltags
 [goreport-svg]: https://goreportcard.com/badge/github.com/darkoatanasovski/htmltags
