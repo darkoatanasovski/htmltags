@@ -11,7 +11,7 @@ skipped.
 Strip HTML tags library is very useful if you work with web crawlers, and want to remove tags,
 or want to keep specific tags.
 
-## Instalation
+## Installation
 ```bash
 $ go get github.com/darkoatanasovski/htmltags
 ``` 
