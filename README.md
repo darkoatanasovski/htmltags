@@ -1,6 +1,7 @@
 HTML Strip tags
 =====================
 
+[![Go Report Card][goreport-svg]][goreport-link]
 [![License][license-svg]][license-link]
 
 This is a Go package which removes HTML tags from a string. Also, you can provide an array of `allowedTags` that can be
@@ -49,6 +50,7 @@ If you have cloned this repo you will probably need the dependency:
 
 `go get golang.org/x/net/html`
 
-
+[goreport-svg]: https://goreportcard.com/badge/github.com/darkoatanasovski/htmltags
+[goreport-link]: https://goreportcard.com/report/github.com/darkoatanasovski/htmltags
 [license-svg]: https://img.shields.io/badge/license-BSD--style+patent--grant-blue.svg
 [license-link]: https://github.com/darkoatanasovski/htmltags/blob/master/LICENSE
