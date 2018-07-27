@@ -17,7 +17,7 @@ $ go get github.com/darkoatanasovski/htmltags
 ## Usage
 
 
-If you want to keep the inline attributes of the tags, set user third parameter to `false`
+If you want to keep the inline attributes of the tags, set third parameter to `false`
 ```go
 stripped, _ := htmltags.Strip("<h1>Header text with <span style=\"color:red\">color</span></h1>", []string{"span"}, false)
 ```
