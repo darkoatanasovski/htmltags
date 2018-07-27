@@ -47,7 +47,7 @@ func toNodes(document string) (*html.Node, error){
 }
 
 //Nodes method. Converts nodes to string
-func (nodes *Nodes) toString() string{
+func (nodes *Nodes) ToString() string{
 	var buf bytes.Buffer
 	for n := nodes.Elements.FirstChild; n != nil; n = n.NextSibling {
 		html.Render(&buf, n)
