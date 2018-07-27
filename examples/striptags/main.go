@@ -1,12 +1,11 @@
-package examples
+package main
 
 import (
 	"fmt"
 	"github.com/darkoatanasovski/htmltags"
 )
 
-//StripTags example function
-func StripTags() {
+func main() {
 	original := "<div>This is <strong style=\"font-size:50px\">complex</strong> text with <span>children <i>nodes</i></span></div>"
 	allowedTags := []string{"strong", "i"}
 	removeInlineAttributes := false
@@ -15,3 +14,4 @@ func StripTags() {
 	fmt.Println(stripped)
 	fmt.Println(stripped.ToString())
 }
+
