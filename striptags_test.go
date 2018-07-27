@@ -21,8 +21,8 @@ func TestStrip(t *testing.T){
 	}
 
 	for _, test := range tests {
-		if got, _ := Strip(test.Input, test.AllowedTags, test.StripInlineAttributes); got.toString() != test.Want {
-			t.Errorf("%q: want %q, got %q", test.Input, test.Want, got.toString())
+		if got, _ := Strip(test.Input, test.AllowedTags, test.StripInlineAttributes); got.ToString() != test.Want {
+			t.Errorf("%q: want %q, got %q", test.Input, test.Want, got.ToString())
 		}
 	}
 }
