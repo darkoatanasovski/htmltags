@@ -14,4 +14,3 @@ func main() {
 	fmt.Println(stripped)
 	fmt.Println(stripped.ToString())
 }
-
