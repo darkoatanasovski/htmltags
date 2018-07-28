@@ -8,13 +8,17 @@ HTML Strip tags
 
 This is a Go package which strip HTML tags from a string. Also, you can provide an array of `allowableTags` that can be
 skipped.
-Strip HTML tags library is very useful if you work with web crawlers, and want to remove tags,
-or want to keep specific tags.
+Strip HTML tags library is very useful if you work with web crawlers, or just want to strip all or specific tags from
+a string.
+
 ```go
 nodes, err := Strip(content string, allowableTags []string, stripInlineAttributes bool) (Nodes, error)
+nodes.Elements //HTML nodes structure of type *html.Node
+nodes.ToString() //returns stripped HTML string
 ```
 
 ## Installation
+
 ```bash
 $ go get github.com/darkoatanasovski/htmltags
 ``` 
@@ -26,7 +30,6 @@ input                   - string
 allowableTags           - []string{} //array of strings e.g. []string{"p", "span"}
 removeInlineAttributes  - bool // true/false
 ```
-
 
 ## Return values
 
