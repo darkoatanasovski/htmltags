@@ -47,7 +47,10 @@ empty array
 stripped, err := htmltags.Strip("<h1>Header text with <span style=\"color:red\">color</span></h1>", []string{}, false)
 ```
 
+A working example
 ```go
+package main
+
 import(
     "fmt"
     "github.com/darkoatanasovski/htmltags"
