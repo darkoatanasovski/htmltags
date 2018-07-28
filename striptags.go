@@ -12,7 +12,7 @@ type Nodes struct {
 }
 
 //Strip tags from provided html string
-func Strip(content string, allowedTags []string, stripInlineAttributes bool) (Nodes, error) {
+func Strip(content string, allowableTags []string, stripInlineAttributes bool) (Nodes, error) {
 	document, err := toNodes(content)
 	handleError(err)
 	var nodeTree html.Node
@@ -20,7 +20,7 @@ func Strip(content string, allowedTags []string, stripInlineAttributes bool) (No
 	var output func(document *html.Node, nt *html.Node)
 	output = func(document *html.Node, nt *html.Node) {
 		for c := document.FirstChild; c != nil; c = c.NextSibling {
-			if c.Type == html.TextNode || (c.Type == html.ElementNode && inArray(c.Data, allowedTags)) {
+			if c.Type == html.TextNode || (c.Type == html.ElementNode && inArray(c.Data, allowableTags)) {
 				var childNode html.Node
 				childNode.Type = c.Type
 				childNode.Data = c.Data

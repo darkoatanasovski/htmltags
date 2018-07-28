@@ -7,7 +7,7 @@ import (
 func TestStrip(t *testing.T) {
 	tests := []struct {
 		Input                 string
-		AllowedTags           []string
+		allowableTags           []string
 		StripInlineAttributes bool
 		Want                  string
 	}{
@@ -21,7 +21,7 @@ func TestStrip(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if got, _ := Strip(test.Input, test.AllowedTags, test.StripInlineAttributes); got.ToString() != test.Want {
+		if got, _ := Strip(test.Input, test.allowableTags, test.StripInlineAttributes); got.ToString() != test.Want {
 			t.Errorf("%q: want %q, got %q", test.Input, test.Want, got.ToString())
 		}
 	}
