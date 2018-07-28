@@ -11,7 +11,8 @@ type Nodes struct {
 	Elements *html.Node
 }
 
-//Strip tags from provided html string
+//Strip HTML tags from a string. This function allows you to provide an array of allowable tags which will be skipped
+//from removing. Also, you can strip the HTML tag attributes (e.g. style, class, id ...)
 func Strip(content string, allowableTags []string, stripInlineAttributes bool) (Nodes, error) {
 	document, err := toNodes(content)
 	handleError(err)
