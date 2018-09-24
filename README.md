@@ -77,7 +77,7 @@ If you have cloned this repo you will probably need the dependency:
 
 ## Notes
 > The broken or partial html will be fixed. If your input HTML string is `<p>Content <i>italic`, 
-> the fixed string will be `<p>Content <i>italic</i></i>` 
+> the fixed string will be `<p>Content <i>italic</i></p>` 
 
 
 [build-status-svg]: https://api.travis-ci.org/darkoatanasovski/htmltags.svg?branch=master
